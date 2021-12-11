@@ -1,0 +1,11 @@
+.userList ul {
+    list-style-type: none;
+    padding: 0px; 
+}
+
+    .userList li {
+       color: honeydew;
+       border: 1px solid honeydew;
+       border-radius: 2px;
+       padding: 4px;
+    }
