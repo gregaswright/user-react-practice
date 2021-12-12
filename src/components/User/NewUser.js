@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, Fragment} from 'react'
 
 import Button from '../UI/Button'
 import Card from '../UI/Card'
@@ -43,7 +43,7 @@ const NewUser = (props) => {
         }
 
         props.addUserObject(user)
-
+        
         setName('')
         setAge('')
     }
@@ -53,7 +53,7 @@ const NewUser = (props) => {
     }
 
     return (
-        <div>
+        <Fragment>
         {error && <Modal title={error.title} message={error.message} errorHandler={errorHandler}/>}
         <Card className={classes.input}>
             <form onSubmit={localSubmitHandler}>
@@ -64,7 +64,7 @@ const NewUser = (props) => {
                 <Button type={'submit'}>Create User</Button>
             </form>
         </Card>
-        </div>
+        </Fragment>
     )
 }
 
